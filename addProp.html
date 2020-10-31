@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css?v=0.9"> 
+</head>
+<body>
+
+    <nav>
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>  
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="./index.html"><strong>Home</strong></a></li>
+            <li><a href="./propiedades.html"><strong>Propiedades</strong></a></li>
+            <li><span id="userlogin"></span></li>
+            <li><span style="color: white; cursor:pointer;" onclick="logoutUser()">Logout</span></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid my-5">
+        <!-- <div class="mt-1">
+            <img src="https://cdn.pixabay.com/photo/2018/09/25/09/17/sale-3701777_960_720.jpg" alt="" width="100%" height="350px">
+        </div> -->
+        <section class="m-4">
+            <strong style="font-size: 25px;">AGREGAR PROPIEDAD</strong>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <form class="my-4">
+                        <div class="form-group">
+                            <label >Titulo/Nombre/Tipo</label>
+                            <input type="text" class="form-control form-control-sm" id="titulo" placeholder="Titulo/Nomre Propiedad/Tipo">
+                        </div>
+                        <div class="form-group">
+                            <label>Propietario</label>
+                            <input type="text" class="form-control form-control-sm" id="propietario" placeholder="Propietario">
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" class="form-control form-control-sm" id="ciudad" placeholder="Propietario">
+                        </div>
+                        <div class="form-group">
+                            <label>Precio</label>
+                            <input type="text" class="form-control form-control-sm" id="precio" placeholder="Precio">
+                        </div>
+                        <div class="form-group">
+                            <label >Direccion</label>
+                            <input type="text" class="form-control form-control-sm" id="direccion" placeholder="direccion de la propiedad">
+                        </div>
+                        <div id="latlng" style="display: none;">
+                            <div class="m-1">
+                                <span>Lat: <strong id="lat"></strong></span>  <br> 
+                                <span>Lng: <strong id="lng"></strong></span> 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Adjuntar archivos</label>
+                            <input type="file" multiple class="form-control-file">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block" onclick="addProperty()">Agregar</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div id="map"></div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <footer>
+        BIENES RAICES
+    </footer>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAw4woNIssZ0P5Lonws9W-9LTRHRCMyqc&libraries=places&callback=initMap " async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="./js/map.js?v=0.01"></script>
+    <script src="./js/nav.js?v=0.2"></script>
+    <script src="./js/properties.js?v=0.1"></script>
+    <script src="./js/log.js?v=0.1"></script>
+    
+    <script>
+        verifyUser();
+    </script>
+</body>
+</html>

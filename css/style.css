@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.col-12, .col-md-4 {
+    position: static;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+} 
+
+.cover-main {
+    overflow: hidden;
+    height: 600px;
+    background-image: url('https://arcencielstudio.com/wp-content/uploads/2016/12/5-Tips-para-tomar-fotos-de-bienes-raices-1.png');
+}
+
+nav {
+    height: 8vh;
+    background: #5b78c7;
+}
+
+/* NAVBAR */
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a{
+    color: #fff;  
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 768px) {
+    .line {
+        width: 30px;
+        height: 2px;
+        background: white;
+        margin: 5px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 100;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #5b78c7;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -50%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open{
+        clip-path: circle(1300px at 90% -10%);
+        -webkit-clip-path: circle(1300px at 90% -50%);
+        pointer-events: all;
+        z-index: 50;
+    }
+    .landing{
+        flex-direction: column;
+    }
+    .nav-links li {
+        opacity: 1;
+    }
+    .nav-links li a {
+        font-size: 20px;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    li.fade {
+        opacity: 1;
+    }
+}
+
+/*  */
+
+/* LOGIN | REGISTER TABS */
+.form {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 350px;
+    background:#f5f5f5;
+}
+.form .tab-header {
+    height:50px;
+    line-height:50px;
+}
+.form .tab-header > div {
+    width:50%;
+    float:left;
+    text-align:center;
+    background:#ddd;
+    color:#555;
+    cursor:pointer;
+}
+.form .tab-header > div.active {
+    background:#f5f5f5;
+    color:#111;
+}
+.form .tab-content {
+    padding:20px;
+}
+.form .tab-content .form-element {
+    margin:10px 0px;
+}
+.form .tab-content .form-element input {
+    width:100%;
+    padding:10px;
+    border:1px solid #aaa;
+    font-size:16px;
+    background:#f5f5f5;
+    border-radius:5px;
+    outline:none;
+}
+.select-styled {
+    display:block;
+    padding: 5px 10px;
+    height:42px;
+    margin:10px auto;
+    -webkit-appearance: none;
+    height: 40px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    border:1px solid #aaa;
+    font-size: 16px;
+}
+.form .tab-content .form-element button {
+    margin-top:5px;
+    width:100%;
+    padding:10px;
+    border:none;
+    outline:none;
+    background:#5b78c7;
+    color:#f5f5f5;
+    font-size:16px;
+    text-transform:uppercase;
+    cursor:pointer;
+    border-radius:5px;
+}
+.form .tab-content > div.active {
+    display:block;
+}
+.form .tab-content > div {
+    display:none;
+}
+.img-log img{
+    display: block;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+#map {
+    width: 100%;
+    height: 700px;
+}
+#mapdetail {
+    width: 100%;
+    height: 700px;
+    background-color: black;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 110px;
+    background-color: #5b78c7;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
