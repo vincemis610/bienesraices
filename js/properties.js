@@ -30,7 +30,7 @@ addProperty = () => {
         redirect: 'follow'
     };
 
-    fetch(`${api}add`, opts)
+    fetch(`https://haunted-mausoleum-45629.herokuapp.com/add`, opts)
     .then(response => response.json())
     .then(result => {
         window.location.href = 'propiedades.html'
@@ -58,8 +58,9 @@ listProperties = () => {
                             <img class="card-img-top" src="${result[i].imgs[0]}" alt="Card image cap">
                             <div class="card-body">
                                 <div><strong>${result[i].title}</strong></div>
-                                <div>Precio: ${result[i].price}</div>
-                                <div class="my-2">Propietario: ${result[i].own}</div>        
+                                <div><strong>City</strong>: ${result[i].city}</div>
+                                <div><strong>Precio</strong>: ${result[i].price}</div>
+                                <div class="my-2"><strong>Propietario</strong>: ${result[i].own}</div>        
                                 <a href="propiedad.html?id=${result[i]._id}" class="btn btn-primary btn-block">Ver</a>
                             </div>
                         </div>
